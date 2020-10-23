@@ -19,27 +19,29 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2019 03:52:25 GMT
+      - Fri, 03 Apr 2020 11:23:49 GMT
       Content-Type:
       - text/plain; charset=utf-8
       Content-Length:
-      - '302'
+      - '304'
       Connection:
       - close
       Set-Cookie:
-      - __cfduid=dcb66ebdefec02474d0a00765432a643e1569383545; expires=Thu, 24-Sep-20
-        03:52:25 GMT; path=/; domain=.hbdm.com; HttpOnly
+      - __cfduid=d50a60a81805ec587f28da3ec31c70d5f1585913029; expires=Sun, 03-May-20
+        11:23:49 GMT; path=/; domain=.hbdm.com; HttpOnly; SameSite=Lax
       Accept-Language:
       - en-US
+      Cf-Cache-Status:
+      - DYNAMIC
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 51ba0b943ce6c10e-KUL
+      - 57e26b712a202cdf-KUL
     body:
       encoding: UTF-8
-      string: '{"ch":"market.BTC_CW.detail.merged","status":"ok","tick":{"amount":"241837.433216733006225481128385226604514244","ask":[8569.85,43],"bid":[8569.84,3702],"close":"8568.13","count":395947,"high":"9599","id":1569383545,"low":"7759","open":"9528.54","ts":1569383545281,"vol":"21161004"},"ts":1569383545281}'
+      string: '{"ch":"market.BTC_CW.detail.merged","status":"ok","tick":{"amount":"98405.497978712221502178706335941841949759","ask":[6944.61,161],"bid":[6944.6,24],"close":"6945.09","count":178961,"high":"7332.96","id":1585913029,"low":"6644.82","open":"6818.24","ts":1585913029607,"vol":"6759594"},"ts":1585913029607}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2019 03:52:25 GMT
+  recorded_at: Fri, 03 Apr 2020 11:23:45 GMT
 recorded_with: VCR 4.0.0
