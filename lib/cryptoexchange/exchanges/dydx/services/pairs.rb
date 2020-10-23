@@ -10,14 +10,16 @@ module Cryptoexchange::Exchanges
         end
 
         def adapt(output)
-          output['markets'].map do |pair|
-            base, target = pair[0].split("-")
+          output['markets'].map do |pair, value|
+            next if value["type"] == "PERPETUAL"
+
+            base, target = pair.split("-")
             Cryptoexchange::Models::MarketPair.new(
               base:   base,
               target: target,
               market: Dydx::Market::NAME
             )
-          end
+          end.compact
         end
       end
     end

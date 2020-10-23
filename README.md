@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/coingecko/cryptoexchange.svg)](https://travis-ci.org/coingecko/cryptoexchange)
+# Cryptoexchange [UNMAINTAINED]
 
-# Cryptoexchange
+**Note: This public repository will no longer be maintained by the CoinGecko team.**
 
 Cryptoexchange is a rubygem for ruby developers to interact with over 200+ cryptocurrency exchange market data APIs in a single library.
 
@@ -43,6 +43,7 @@ Or install it yourself as:
 | Atomars           | Y       | Y          | Y       |         | Y           | Y        | atomars           |       |
 | AXNET (halted)    | Y       | Y          | Y       |         | Y           | Y        | axnet             |       |
 | B2BX              | Y       | N          |         |         | Y           |          | b2bx              |       |
+| Balancer          | Y       |            |         |         | Y           |          | balancer          |       |
 | Bamboo Relay      | Y       | Y [x]      |         |         | Y           | Y        | bamboo_relay      |       |
 | Bancor            | Y       | N          | N       |         | Y           |          | bancor            |       |
 | Bankera           | Y       | Y [x]      | Y       |         | Y           | Y        | bankera           |       |
@@ -90,6 +91,7 @@ Or install it yourself as:
 | Bitfinex          | Y       | Y [x]      |         |         | Y           |          | bitfinex          |       |
 | Bitflyer          | Y       | Y [x]      |         |         | Y           |          | bitflyer          |       |
 | Bitforex          | Y       | Y [x]      | N       |         | Y           |          | bitforex          |       |
+| Bitget            | Y       | Y [x]      | Y       |         | Y           | Y        | bitget            |       |
 | Bithash           | Y       | Y [x]      | Y       |         | Y           | Y        | bithash           |       |
 | Bitholic          | Y       | Y [x]      | Y       |         | Y           |          | bitholic          |       |
 | Bithumb           | Y       | Y [x]      |         |         | Y           |          | bithumb           |       |
@@ -140,7 +142,7 @@ Or install it yourself as:
 | BTCChina          |         |            |         |         |             |          |                   |       |
 | BTCMarkets        | Y       | Y [x]      |         |         | Y           | Y        | btcmarkets        |       |
 | Btcsquare         | Y       | Y          | Unstable|         | Y           | Y        | btcsquare         |       |
-| BTCTurk           | Y       | Y [x]      |         |         | Y           |          | btcturk           |       |
+| BTCTurk           | Y       | Y [x]      |         |         | Y           | Y        | btcturk           |       |
 | BTER              | Y       |            |         |         | Y           |          | bter              |       |
 | BTSE              | Y       | Y [x]      | Y       |         | Y           | Y        | btse              |       |
 | BTCNEXT           | Y       |            |         |         | Y           | N        | btcnext           |       |
@@ -224,6 +226,7 @@ Or install it yourself as:
 | CRXZone           | Y       | Y [x]      | Y       |         | Y           | Y        | crxzone           |       |
 | Cryptagio         | Y       | Y          | Y       |         | Y           | Y        | cryptagio         |       |
 | Cryptaldash       | Y       | Y          | Y       |         | Y           |          | cryptaldash       |       |
+| Cryptlocex        | Y       | Y [x]         | N       |      | Y           | Y        | cryptlocex           |       |
 | Cryptex           | Y       | Y          | Y       |         | User-Defined| Y        | cryptex           |       |
 | CryptoBridge      | Y       |            |         |         | Y           | Y        | crypto_bridge     |       |
 | CryptoHub         | Y       | N          | N       |         | Y           |          | crypto_hub        |       |
@@ -233,6 +236,7 @@ Or install it yourself as:
 | Cryptopia         | Y       | Y          | Y       |         | Y           |          | cryptopia         |       |
 | Crytrex           | Y       | Y [x]      |         |         | Y           | Y        | crytrex           |       |
 | Currency          | Y       |            |         |         | Y           | Y        | currency          |       |
+| Curve             | Y       |            |         |         | Y           |          | curve             |       |
 | Cybex             | Y       |            | Y       |         | Y           |          | cybex             |       |
 | Dach.Exchange     | Y       |            |         |         | Y           | Y        | dach_exchange     |       |
 | Dakuce            | Y       | Y          | Y       |         | Y           |          | dakuce            |       |
@@ -282,6 +286,7 @@ Or install it yourself as:
 | Forkdelta         | Y       | N          | N       |         | Y           | Y        | forkdelta         |       |
 | Freiexchange      | Y       | Y          |         |         | User-Defined| Y        | freiexchange      |       |
 | FTX (Spot)        | Y       | Y [x]      |         |         | Y           | Y        | ftx_spot          |       |
+| FTX.us            | Y       | Y [x]      |         |         | Y           | Y        | ftx_us            |       |
 | FinexBox          | Y       | Y [x]      |         |         | Y           | Y        | finexbox          |       |
 | Fubt              | Y       |            |         |         | Y           | Y        | fubt              |       |
 | Gate              | Y       | Y [x]      | Y       |         | Y           | Y        | gate              |       |
@@ -364,7 +369,7 @@ Or install it yourself as:
 | Namebase          | Y       | Y          | Y       | Y       | Y           |          | namebase          |       |
 | Nanex             | Y       | N          | N       | N       | Y           |          | nanex             |       |
 | Nanu.Exchange     | Y       | Y          | Y       |         | Y           |          | nanu_exchange     |       |
-| Nash              | Y       |            |         |         | Y           |          | nash              |       |
+| Nash              | Y       | Y [x]      |         |         | Y           |          | nash              |       |
 | NebliDex          | Y       | N          | N       | N       | Y           | N        | neblidex          |       |
 | Nebula            | Y       | N          | Y       |         | Y           |          | nebula            |       |
 | Negociecoins      | Y       | Y [x]      | Y       |         | User-Defined|          | negociecoins      |       |
@@ -466,7 +471,8 @@ Or install it yourself as:
 | Txbit             | Y       | Y [x]      |         |         | Y           | Y        | txbit             |       |
 | UEX               | Y       |            |         |         | Y           |          | uex               |       |
 | Unidax            | Y       | N          | N       |         | Y           | N        | unidax            |       |
-| Uniswap           | Y       | N          | N       |         | Y           | N        | uniswap           |       |
+| Uniswap (v2)      | Y       | N          | N       |         | Y           | N        | uniswap           |       |
+| Uniswap (v1)      | Y       | N          | N       |         | Y           | N        | uniswap_v1        |       |
 | Unnamed           | Y       | Y          | Y       |         | Y           | Y        | unnamed           |       |
 | Unocoin           |         |            |         |         |             |          | unocoin           |       |
 | Upbit             | Y       | Y [x]      | Y       |         | Y           | Y        | upbit             |       |
@@ -482,7 +488,7 @@ Or install it yourself as:
 | Vindax            | Y       | Y [x]      |         |         | Y           | Y        | vindax            |       |
 | Vinex             | Y       | Y [x]      |         |         | Y           | Y        | vinex             |       |
 | Vitex             | Y       | Y [x]      | Y       |         | Y           | Y        | vitex             |       |
-| Waves             | Y       | N          | Y       |         | Y           |          | waves             |       |
+| Waves             | Y       | Y [x]      | Y       |         | Y           |          | waves             |       |
 | WazirX            | Y       | Y [x]      |         |         | Y           |          | wazirx            |       |
 | Wcx               | Y       | Y          | Y       |         | Y           |          | wcx               |       |
 | Wex               | Y       | Y          | Y       |         | Y           | Y        | wex               |       |
@@ -501,7 +507,7 @@ Or install it yourself as:
 | Zbmega            | Y       | N          | N       |         | Y           | Y        | zbmega            |       |
 | Zebpay            | Y       | Y [x]      |         |         | Y           | Y        | Zebpay            |       |
 | Zeniex            | Y       | Y          | Y       |         | Y           |          | zeniex            |       |
-| ZG                | Y       | Y [x]      | Y       |         | Y           | Y        | zg                |       |
+| ZG                | Y       |            |         |         | Y           | Y        | zg                |       |
 | ZG.TOP            | Y       |            |         |         | Y           |          | zgtop             |       |
 
 ### Derivatives (Perpetual & Futures)
@@ -514,16 +520,19 @@ Or install it yourself as:
 | Bitflyer Futures  | Y | Y  | Y    |  Y  |  N      | Y   |  N  |       |      | N  | N  |    |     |     |  bitflyer_futures  |
 | Bitfinex Futures  | Y | Y  | Y    |     |  Y      | Y   |  Y  |       |      | N  | N  | Y  | Y   |     |  bitfinex_futures  |
 | Bitforex Futures  | Y | Y  | Y    |  Y  |  Y      | Y   |  Y  |       |      |    |    | Y  | Y   | N   |  bitforex_futures  |
+| Bithumb Futures   | Y | Y  | Y    |  Y  |  Y      | Y   |  Y  |       |      |    |    | Y  | Y   | N   |  bithumb_futures  |
 | Bitmax.IO Futures | Y | Y  | Y    |  Y  |  Y      | Y   |  Y  |       |      |    |    |    | Y   | N   |  bitmax_futures  |
 | Bitmart Futures   | Y | Y  | Y    |  Y  |  Y      | Y   |  Y  |   Y   |   Y  | Y  | Y  | Y  | Y   | Y   |  bitmart futures  |
 | Bitmex            | Y | Y  | Y    |  Y  |  Y      | Y   |  Y  |   Y   |   Y  | Y  | Y  | Y  | Y   | Y   |  bitmex  |
 | Bitz Futures      | Y | Y  | Y    |  Y  |  Y      | Y   |  Y  |       |      | N  | N  | N  | N   | Y   |  bitz_futures  |
 | Btcmex            | Y | X  | Y    |  Y  |  Y      | Y   |  Y  |       |      | N  | N  | Y  | Y   | Y   |  btcmex |
 | Bybit             | Y | Y  | Y    |  Y  |  Y      | Y   |  Y  |       |      | N  | N  | Y  | Y   | Y   |  bybit |
+| Biki Futures      | Y | Y  | Y    |  Y  |  N      | Y   |  Y  |       |      | N  | N  | Y  | Y   | N   |  biki_futures |
 | CME Futures       | Y | N  | Y    |  Y  |  N      | Y   |  N  |       |      | N  | Y  | N  | N   | N   |  cme_futures |
 | Coinflex Futures  | N | N  | Y    |  Y  |  N      | Y*  |  N  |       |      | N  | N  |    |     |     |  coinflex_futures  |
 | Deribit           | Y | Y  | Y    |  Y  |  Y      | Y   |  Y  |       |      | Y  | Y  | Y  | Y   | Y   |  deribit |
 | Delta Futures     | Y | Y  | Y    |  Y  |  N      | Y   |  Y  |   Y   |   Y  | N  | N  | Y  | N   | N   |  delta_futures |
+| Dydx (Perpetual)  | Y | Y  | Y    |  Y  |  Y      | Y   |  N  |   N   |   N  | N  | N  | Y  | N   | N   | dydx_perpetual |
 | FTX               | Y | Y  | Y    |  Y  |  Y      | Y   |  Y  |   Y   |   Y  | N  | Y  | Y  | Y   | N   |  ftx |
 | Fmex              | Y | Y  | Y    |  Y  |  Y      | Y   |  Y  |       |      | N  | N  | Y  | Y   | Y   |  fmex |
 | Gate (Futures)    | Y | Y  | Y    |  Y  |  Y      | Y   |  Y  |       |      | N  | N  | Y  | Y   | Y   |  gate_futures  |
@@ -539,6 +548,7 @@ Or install it yourself as:
 | BaseFEX           | Y | Y  | Y    |  Y  |  Y      | Y   |  Y  |       |      | N  | N  | Y  | Y   | Y   |  basefex  |
 | Phemex            | Y | Y  | Y    |  Y  |  Y      | Y   |  Y  |       |      | N  | N  | Y  | N   | N   |  phemex  |
 | Liquid (Derivatives) | Y | Y  | Y    |  Y  |  N      | Y   |  Y  |       |      | N  | N  | Y  | N   | N   |  liquid_derivatives  |
+| Zbg Futures       | Y | Y  | Y    |  Y  |  N      | Y   |  N  |       |      | N  | N  | N  | N   | N   |  zbg_futures  |
 
 *Legend*
 

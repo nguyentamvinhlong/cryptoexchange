@@ -19,20 +19,21 @@ module Cryptoexchange::Exchanges
 
 
         def adapt_all(output)
-          output['markets'].map do |ticker|
-            base, target = ticker[0].split('-')
+          output['markets'].map do |ticker, value|
+            next if value["type"] == "PERPETUAL"
+
+            base, target = ticker.split('-')
             market_pair = Cryptoexchange::Models::MarketPair.new(
               base: base,
               target: target,
               market: Dydx::Market::NAME
             )
-            adapt(ticker, market_pair)
-          end
+            adapt(value, market_pair)
+          end.compact
         end
 
         def adapt(output, market_pair)
           ticker           = Cryptoexchange::Models::Ticker.new
-          output           = output[1]
           ticker.base      = market_pair.base
           ticker.target    = market_pair.target
           ticker.market    = Dydx::Market::NAME

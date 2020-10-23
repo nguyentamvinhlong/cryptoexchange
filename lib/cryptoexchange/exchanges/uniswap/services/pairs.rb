@@ -2,8 +2,12 @@ module Cryptoexchange::Exchanges
   module Uniswap
     module Services
       class Pairs < Cryptoexchange::Services::Pairs
+        STABLECOINS_TARGETS = %w{ DAI USDC USDT }
+        WETH_TARGET = ["WETH"]
+        RECOGNIZED_TARGETS = STABLECOINS_TARGETS + WETH_TARGET
+
         def pairs_url
-          "#{Cryptoexchange::Exchanges::Uniswap::Market::API_URL}/exchanges?key=#{Cryptoexchange::Exchanges::Uniswap::Market.api_key}"
+          "#{Cryptoexchange::Exchanges::Uniswap::Market::API_URL}/exchanges?platform=uniswap-v2&key=#{Cryptoexchange::Exchanges::Uniswap::Market.api_key}"
         end
 
         def fetch
@@ -13,12 +17,12 @@ module Cryptoexchange::Exchanges
 
         def adapt(output)
           market_pairs = []
-          output.each do |pair|
-            base = pair["tokenSymbol"]
-            target = "ETH"
 
-            # Temporary workaround for duplicate symbols
-            base = "#{pair['tokenSymbol']}-#{pair['token']}" if base == "ULT"
+          output = output["results"].select { |ticker| RECOGNIZED_TARGETS.include? ticker["assets"][1]["symbol"] }
+          output.each do |pair|
+            base = pair["assets"][0]["symbol"]
+            target = pair["assets"][1]["symbol"]
+            target = "ETH" if pair["assets"][1]["symbol"] == "WETH" # Fix WETH as ETH
 
             market_pairs << Cryptoexchange::Models::MarketPair.new(
                               base: base,

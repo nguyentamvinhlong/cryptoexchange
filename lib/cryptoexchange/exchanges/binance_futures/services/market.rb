@@ -9,12 +9,17 @@ module Cryptoexchange::Exchanges
         end
 
         def fetch
-          output = super(ticker_url)
-          adapt_all(output)
+          perpetual_output = super(perpetual_ticker_url)
+          futures_output = super(futures_ticker_url)
+          adapt_all(perpetual_output) + adapt_all(futures_output)
         end
 
-        def ticker_url
+        def perpetual_ticker_url
           "#{Cryptoexchange::Exchanges::BinanceFutures::Market::API_URL}/ticker/24hr"
+        end
+
+        def futures_ticker_url
+          "#{Cryptoexchange::Exchanges::BinanceFutures::Market::FUTURES_API_URL}/ticker/24hr"
         end
 
         def adapt_all(output)
@@ -41,7 +46,12 @@ module Cryptoexchange::Exchanges
           ticker.last      = NumericHelper.to_d(output['lastPrice'])
           ticker.high      = NumericHelper.to_d(output['highPrice'])
           ticker.low       = NumericHelper.to_d(output['lowPrice'])
-          ticker.volume    = NumericHelper.to_d(output['volume'])
+
+          if market_pair.contract_interval == "perpetual"
+            ticker.volume    = NumericHelper.to_d(output['volume'])
+          elsif market_pair.contract_interval == "futures"
+            ticker.volume    = NumericHelper.to_d(output['baseVolume']) if output['baseVolume'].to_f > 0
+          end
           ticker.timestamp = nil
           ticker.payload   = output
           ticker
